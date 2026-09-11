@@ -1,0 +1,50 @@
+---
+title: "Personal Webpage <3"
+author: "Annabel Zlatich"
+date: "`r format(Sys.time(),'%Y-%b-%d, %I:%M %p')`"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+<center>
+<img src="photo.jpg" width="280" height="350"/>
+</center>
+
+# kinda nervous, first rmd.
+## i loooove science
+
+-I am AB<br>
+**Big** _chillin_
+
+## Shopping list
+- Fruits
+  * Apples 
+  * Oranges
+   
+## to-do list
+1. Finish markdown tut
+2. Go to grocery store
+3. eat lunch
+
+```{r, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+14+14
+```
+## R
+
+```{r echo=T, warning=F, message=F}
+library(ggplot2)
+library(palmerpenguins)
+
+
+```
+
+
+|Heading 1|Heading 2|Heading 3|
+|---------|---------|---------|
+|Row 1, columnn 1| Row 1, column 2|Row 1, column 3|
+|Row 2, columnn 1| Row 2, column 2|Row 2, column 3|
+|Row 3, columnn 1| Row 3, column 2|Row 3, column 3|
+
+
