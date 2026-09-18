@@ -1,0 +1,58 @@
+---
+title: "Assignment 1"
+author: Annabel Zlatich
+date:  "`r format(Sys.time(),'%Y-%b-%d, %I:%M %p')`"
+---
+
+# Hi Annabel
+
+# Q1
+```{r}
+height <-175
+print(height)
+```
+
+# Q2
+```{r}
+25*4-10
+```
+# Q3
+```{r}
+sqrt(81)
+```
+# Q4
+```{r}
+message<- "R is fun!"
+print(message)
+```
+# Q5
+```{r}
+a<-10
+b<-5
+a+b
+c <- (a+b)
+c
+```
+# Q6
+```{r}
+15>20
+```
+# Q7
+```{r}
+class("Hello World")
+```
+# Q8
+```{r, warning=FALSE}
+log(-1)
+```
+# Q9
+```{r, message=FALSE, warning=FALSE}
+# I can't get the error message to leave and I can't knit when the library(dplyr) is in my code so I had to leave it out to submit the assignment
+```
+# Q10
+```{r}
+grades <- c(80,90,75,95,85)
+mean(grades)
+average<-mean(grades)
+average
+```
