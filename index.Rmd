@@ -50,4 +50,5 @@ library(palmerpenguins)
 
 ## To show you
 
-### [Homework](Website/Homework_1.html)
+### [Homework 1](Website/Homework_1.html)
+### [Homework 2](Website/Homework_2.html)
