@@ -1,0 +1,82 @@
+---
+title: "Homework 2"
+author: "Annabel Zlatich"
+date: "`r format(Sys.time(),'%Y-%b-%d, %I:%M %p')`"
+---
+```{r}
+library("dplyr")
+# install.packages("gapminder")
+library("gapminder")
+data("gapminder")
+head("gapminder")
+
+```
+#Q1
+```{r}
+#tibble
+```
+#Q2
+```{r}
+library("gapminder")
+head("gapminder")
+gp<- gapminder |> 
+  filter(lifeExp< 29)
+gp
+```
+#Q3
+```{r}
+Rwanda<- gapminder |> 
+  filter(country== "Rwanda",
+         year > 1979)
+Rwanda
+```
+#Q4
+```{r}
+exc<- gapminder |> 
+  select(-'gdpPercap')
+exc
+```
+#Q5
+```{r}
+asce<-gapminder |>  arrange(lifeExp)
+asce
+```
+
+
+#Q6
+```{r}
+des<-gapminder |>  arrange(desc(lifeExp))
+des
+```
+
+#Q7
+```{r}
+ new_gm<- gapminder |> 
+    select(year, lifeExp)
+new_gm
+```
+
+
+
+#Q8
+```{r}
+Cambodia<- gapminder |> 
+  filter(country== "Cambodia") |> 
+        select(year,lifeExp)
+Cambodia
+```
+#Q9
+```{r}
+library("gapminder")
+library("dplyr")
+head(gapminder)
+Af<- gapminder |> 
+  filter(continent== "Africa") |> 
+  select(country)
+Af
+```
+#Q10
+```{r}
+n_gm <- gapminder |>  mutate(lifeExp_months = lifeExp*12)
+n_gm
+```
