@@ -5,7 +5,7 @@ date: "`r format(Sys.time(),'%Y-%b-%d, %I:%M %p')`"
 ---
 ```{r}
 library("dplyr")
-# install.packages("gapminder")
+install.packages("gapminder")
 library("gapminder")
 data("gapminder")
 head("gapminder")

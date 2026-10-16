@@ -52,3 +52,11 @@ library(palmerpenguins)
 
 ### [Homework 1](Website/Homework_1.html)
 ### [Homework 2](Website/Homework_2.html)
+### [Homework 3](Website/Homework_3.html)
+<br>
+
+<hr style="border: 1px solid #ccc;">
+
+## Exam
+
+### [Midterm](Website/Midterm.html)

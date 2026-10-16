@@ -1,0 +1,55 @@
+---
+title: "Homework 3"
+author: "Annabel Zlatich"
+date: "`r format(Sys.time(),'%Y-%b-%d, %I:%M %p')`"
+---
+
+```{r}
+library(ggplot2)
+data("trees")
+head(trees)
+```
+#Q1
+```{r}
+hist(trees$Girth,
+     main="Distribution of Girth in Trees",
+     xlab = "Girth",
+     col="pink")
+
+```
+
+#Q2
+```{r}
+hist(trees$Volume,
+     main="Distribution of Volume in trees",
+     xlab = "Volume",
+     col="purple")
+
+```
+
+
+#Q3
+```{r}
+plot(
+  trees$Girth~trees$Volume,
+  type="p",
+  lwd=2,
+  col="green",
+  xlab="Tree Volume",
+  ylab="Tree Girth",
+  main="Relationship between Tree Volume and Girth",
+)
+```
+
+#Q4
+```{r}
+shapiro.test(trees$Volume)
+#p-value= 0.003229, this indicates that Volume does not have a normal distribution.
+
+```
+
+#Q5
+```{r}
+shapiro.test(trees$Girth)
+#p value=0.08893, this indicates a normal distribution because the value is >0.05
+```

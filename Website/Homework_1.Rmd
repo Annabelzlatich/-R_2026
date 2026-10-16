@@ -47,7 +47,10 @@ log(-1)
 ```
 # Q9
 ```{r, message=FALSE, warning=FALSE}
+
 # I can't get the error message to leave and I can't knit when the library(dplyr) is in my code so I had to leave it out to submit the assignment
+install.packages("dpylr")
+library(dpylr)
 ```
 # Q10
 ```{r}

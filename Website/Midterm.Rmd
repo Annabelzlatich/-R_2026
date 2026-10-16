@@ -1,0 +1,6 @@
+---
+title: "MidTerm"
+output: html_document
+date: "2026-10-16"
+---
+
