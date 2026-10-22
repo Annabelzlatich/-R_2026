@@ -20,8 +20,8 @@ head(storms)
 head(lizards)
 ```
 
-#Mammals sleep dataset (msleep)
-##1.)
+# Mammals sleep dataset (msleep)
+## 1.)
 ```{r}
 
 subset<-msleep|>
@@ -31,7 +31,7 @@ subset
 
 ```
 
-##2
+## 2.)
 ```{r}
 percent_dayawake<-msleep |>
   mutate((awake/24)*100)
@@ -43,8 +43,8 @@ percent_dayawake
 
 ```
 
-#Storms tracks data (storms)
-##3.)
+# Storms tracks data (storms)
+## 3.)
 ```{r}
 storms|> str()
 
@@ -54,7 +54,7 @@ storms |>
 
 ```
 
-##4.)
+## 4.)
 ```{r}
 storms |>
   filter(wind>50) |>
@@ -62,8 +62,8 @@ storms |>
 
 ```
 
-#A Comparison of Site Preferences of Two Species of Lizard (lizards)
-##5.)
+# A Comparison of Site Preferences of Two Species of Lizard (lizards)
+## 5.)
 ```{r}
 lizards|>
   group_by(Site, Diameter) |>
@@ -73,7 +73,7 @@ lizards|>
 
 ```
 
-##6.)
+## 6.)
 ```{r}
 ggplot(data=lizards,
        aes(x=opalinus, y=Site)) +
