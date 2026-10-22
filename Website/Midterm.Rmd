@@ -1,12 +1,8 @@
 ---
 title: "MidTerm"
 output: html_document
-date: "2026-10-16"
+date: "`r format(Sys.time(),'%Y-%b-%d, %I:%M %p')`"
 ---
-
-
-
-
 
 ```{R}
 install.packages("tidyverse")
