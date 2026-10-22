@@ -4,12 +4,11 @@ output: html_document
 date: "`r format(Sys.time(),'%Y-%b-%d, %I:%M %p')`"
 ---
 
-```{R}
-install.packages("tidyverse")
+```{r}
+# install.packages("tidyverse")
 library(tidyverse)
 library(dplyr)
-
-install.packages("aod")
+# install.packages("aod")
 library(aod)
 
 msleep<-glimpse(msleep)
@@ -17,9 +16,7 @@ storms<-storms
 lizards<- lizards
 
 head(msleep)
-
 head(storms)
-
 head(lizards)
 ```
 
