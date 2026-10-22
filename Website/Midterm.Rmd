@@ -4,3 +4,87 @@ output: html_document
 date: "2026-10-16"
 ---
 
+
+
+
+
+```{R}
+install.packages("tidyverse")
+library(tidyverse)
+library(dplyr)
+
+install.packages("aod")
+library(aod)
+
+msleep<-glimpse(msleep)
+storms<-storms
+lizards<- lizards
+
+head(msleep)
+
+head(storms)
+
+head(lizards)
+```
+
+#Mammals sleep dataset (msleep)
+##1.)
+```{r}
+
+subset<-msleep|>
+  filter(awake>=12)
+
+subset
+
+```
+
+##2
+```{r}
+percent_dayawake<-msleep |>
+  mutate((awake/24)*100)
+
+percent_dayawake|>
+  select(awake, everything())
+
+percent_dayawake
+
+```
+
+#Storms tracks data (storms)
+##3.)
+```{r}
+storms|> str()
+
+storms |>
+  group_by(year) |>
+  summarise(num_storms=n())
+
+```
+
+##4.)
+```{r}
+storms |>
+  filter(wind>50) |>
+  arrange(desc(wind))
+
+```
+
+#A Comparison of Site Preferences of Two Species of Lizard (lizards)
+##5.)
+```{r}
+lizards|>
+  group_by(Site, Diameter) |>
+  summarize (
+    new_grahami=sum(grahami)) |>
+  arrange(desc(new_grahami))
+
+```
+
+##6.)
+```{r}
+ggplot(data=lizards,
+       aes(x=opalinus, y=Site)) +
+  geom_boxplot(aes(fill = "opalinus")) +
+  labs(title = "Distribution of opalinus counts under different light conditions") 
+
+```
