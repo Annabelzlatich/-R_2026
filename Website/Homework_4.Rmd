@@ -1,0 +1,69 @@
+---
+title: "Homework 4"
+output: html_document
+date:  "`r format(Sys.time(),'%Y-%b-%d, %I:%M %p')`"
+---
+
+```{r}
+#install.packages("tidyverse")
+library("tidyverse")
+library("lessR")
+library("readxl")
+#install.packages("BSDA")
+library("BSDA")
+setwd("C:/Users/13104/OneDrive/Documents/UPRM/Intro to R")
+butterflies_pesticides <- read_excel("butterflies_pesticides.xlsx")
+list.files("C:/Users/13104/OneDrive/Documents/UPRM/Intro to R")
+butterflies_pesticides <- read_excel(
+  "C:/Users/13104/OneDrive/Documents/UPRM/Intro to R/butterflies_pesticides.xlsx")
+bp<-butterflies_pesticides
+head(bp)
+getwd()
+system("git rev-parse --show-toplevel")
+file.exists(".git")
+list.files(
+  "C:/Users/13104/OneDrive/Documents/UPRM/Intro to R/R_2026",
+  all.files = TRUE
+)
+```
+# Q1
+```{r}
+#independent t-test
+shapiro.test(bp$`Wing Length`)
+```
+
+# Q2
+```{r}
+head(bp)
+var.test(`Wing Length`~ Group, data=bp)
+```
+
+# Q3
+```{r}
+#welch's t-test
+t.test(`Wing Length`~ Group, data=bp,
+            alternative=c("two.sided"),
+            var.equal=FALSE,
+            )
+```
+
+# Q4
+```{r}
+#test stat: t=3.983
+#df=66.029
+#p-value=0.0001721
+#p-value<a of 0.05 so wing length is statistcally signifigant
+```
+
+# Q5
+```{r}
+library(ggplot2)
+
+ggplot(bp, aes(x=Group, y=`Wing Length`))+
+  geom_boxplot()
+```
+
+# Q6
+```{r}
+#I investigated whether there are significant differences in Wing Length between two groups of butterflies by comparing the wing length between two treatment groups, one with pesticides and the other as a control with no treatment. Using a Welch's t-test on wing length from both groups, I analyzed 80 samples. The results indicated a significant difference between the two butterfly groups (t=3.982, df=66.029,p-value = 0.0001721), suggesting that the treatments on butterflies do not result in equal wing lengths. This finding may provide insights into the effets of pesticides on these butterfly populations in their respective habitats.
+```
